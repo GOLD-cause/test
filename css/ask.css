@@ -1,66 +1,415 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "basic.css";
 
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
+.thankyou_message, .ing {
+    color: #ffffff;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2em;
+    z-index: 10;
+}
 
-* {
-    box-sizing: border-box;
-    font-family: "Noto Sans KR", Arial, Helvetica, sans-serif;
-    padding: 20px;
+body {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.459);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+
+
+form {
+    height: 100vh;
+    width: 100vw;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-snap-type: y proximity;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    }
+    
+ form::-webkit-scrollbar {
+    display: none;
+    }
+
+.toindex {
+    padding: 5px 10px;
+    font-size: clamp(18px,2vw,22px);
+    font-weight: 800;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    position: fixed;
+    top: 10px;
+    right: 18px;
+    transition: 0.5s;
+    z-index: 5;
+    padding: 10px 20px;
+    background-color: #ffffff50;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.inc {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 0;
+    width: 10px;
+    background-color: #ffffff;
+}
+
+.section {
+width: 70vw;
+min-height: 90vh;
+margin: auto;
+margin-top: 5vh;
+scroll-snap-align: start;
+scroll-margin-top: 5vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 20px;
+position: relative;
+background-color: rgba(255, 255, 255, 0.274);
+border: 3px solid rgba(255, 255, 255, 0.267);
+border-radius: 15px;
+padding: 20px 20px;
+box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.123);
+}
+
+.head {
+    font-size: clamp(24px,3vw,36px);
+    font-weight: 500;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    word-break: keep-all;
+}
+
+.sub {
+    font-size: clamp(14px,2vw,18px);
+    text-align: center;
+    color: #ffffff;
+    word-break: keep-all;
+    font-weight: 400;
+}
+
+label {
+    font-size: clamp(16px,2vw,22px);
+    font-weight: 500;
+    color: white;
+}
+
+.subs {
+    display: inline;
+    font-size: clamp(16px,2vw,22px);
+    color: #ffcfcf;
+}
+
+.basic1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    width: 500px;
+    padding-bottom: 30px;
+}
+
+.basic1 input {
+    position: absolute;
+    right: 0;
+}
+
+
+.blank {
+    height: 60px;
+    content: "";
+}
+.updown {
+    margin-top: 40px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.884);
+    color: black;
+    border: none;
+    font-size: 16px;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.199);
+    cursor: pointer;
+}
+
+input[type="text"], input[type="tel"], input[type="email"] {
+width: min(70vw,300px);
+font-size: clamp(15px,2vw,20px);
+padding: 8px;
+border: none;
+background-color: rgba(255, 255, 255, 0.151);
+border-radius: 5px;
+text-align: center;
+color: white;
+}
+
+input[type="text"]:hover, input[type="tel"]:hover, input[type="email"]:hover {
+    border-bottom: 3px solid white;
+    color: white;
+    }
+
+textarea:hover {
+    border: 3px solid white;
+    }
+
+textarea:focus {
+    border: 3px solid #E40052;
+    outline: none;
+}
+
+input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus {
+        outline: none;
+        border-bottom: 3px solid #E40052;
+        }
+
+.textleft[type="text"] {
+    font-size: clamp(16px,2vw,22px);
+    text-align: left;
+    padding: 0px;
+    width: 0;
+    margin: 0px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+textarea {
+    resize: none;
+    width: min(80vw,500px);
+    height: min(30vw,300px);
+    font-size: 18px;
+    padding: 12px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.192);
+    border-radius: 5px;
+    color: white;
+}
+
+.infocheck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 12px;
+    margin-top: 20px;
+}
+
+.infocheck div, div.otherfor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infocheck div label, .otherfor label {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.192);
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.infocheck div label:hover, .otherfor label:hover {
+    background-color: rgba(255, 255, 255, 0.486);
+}
+
+.infocheck div input[type="checkbox"]:checked + label, .otherfor input[type="checkbox"]:checked + label {
+    background-color: #ffffff;
+    color: #E40052;
+}
+
+.infocheck div input[type="checkbox"], .otherfor input[type="checkbox"] {
+    display: none;
+}
+
+#otherinfo:checked + label + .textleft[type="text"], #otherservice:checked + label + .textleft[type="text"], #otherweb:checked + label + .textleft[type="text"] {
+    width: min(60vw,300px);
+    margin-left: 10px;
+    padding: 10px;
+    opacity: 1;
+}
+
+.erm {
+    color: #E40052;
+    font-weight: 500;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    font-size: clamp(12px,2vw,16px);
+}
+
+.ermb {
+    position: absolute;
+    bottom: 90px;
+}
+
+.basic div label {
+    margin-bottom: 10px;
+}
+
+div.infocheckcolumn {
+    flex-direction: column;
+}
+
+.kind {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    height: 340px;
+}
+
+.kinda {
+    width: 30%;
+}
+
+.kind div label{
+    width: 100%;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+}
+
+.kind div label img{ 
+    height: 50%;
+    margin-bottom: 20px;
+    transition: 1s;
+}
+
+.kmain{
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: clamp(16px,3vw,20px);
+}
+
+.ksub{
+    text-align: center;
+    font-weight: 400;
+    word-break: keep-all;
+    font-size: clamp(14px,2vw,18px);
+}
+
+.last {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.commm {
+    margin-top: 60px;
+}
+
+.validvalid {
+    min-height: 0px;
+    opacity: 0;
+    padding: 0;
+    border: none;
+}
+
+@media screen and (max-width: 900px) {
+
+    .section {
+        width: 90vw;
+    }
+    .kind{
+        flex-direction: column;
+        height: 50vh;
+    }
+
+    .kind div label{
+        width: 75vw;
+        height: 15vh;
+        column-gap: 20px;
+    }
+
+    .kind div label img{ 
+        height: 90%;
+        margin-bottom: 0;
+    }
+    
+    .kind div label {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-right: 10px;
+    }
+    
+    .kind div label .last {
+        align-items: flex-start;
+    }
+
+    .kmain{
+        text-align: left;
+    }
+    
+    .ksub{
+        text-align: left;
+    }
+
+    .basic1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        width: 260px;
+        padding-bottom: 0;
+    }
+
+    .basic1 input {
+        position: relative;
+        width: 100%;
+    }
+
+    .basic1 label{
+        margin-right: 0;
+        }
+
+    .commm {
+        margin-top: 20px;
+    }
+
+    .erm {
+        position: relative;
+        bottom: 0;
+    }
+
+    .basic {
+        justify-content: flex-start;
+        padding-top: 30px;
+    }
+
+    .kinda {
+        width: 100%;
+    }
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    
+}
+
+.slas {
     display: inline-block;
-  }
-
-
-.s1 {
-    font-size: 8px;
-}
-
-.s2 {
-    font-size: 12px;
-}
-
-.s3 {
-    font-size: 16px;
-}
-
-.s4 {
-    font-size: 20px;
-}
-
-.s5 {
-    font-size: 8px;
-    font-weight: 300;
-}
-
-.s6 {
-    font-size: 12px;
-    font-weight: 500;
-}
-
-.s7 {
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.s8 {
-    font-size: 20px;
-    font-weight: 900;
-}
-
-.s9 {
-    font-size: 8px;
-    font-weight: 900;
-}
-
-.s10 {
-    font-size: 12px;
-    font-weight: 700;
-}
-
-.s11 {
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.s12 {
-    font-size: 20px;
-    font-weight: 300;
+    transform: scaleY(150%);
 }

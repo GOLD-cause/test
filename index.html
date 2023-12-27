@@ -6,59 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAGM</title>
 
-    <link rel="icon" type="image/x-icon" href="S_small.jpg">
+    <link rel="icon" type="image/x-icon" href="image/S_small.png">
     <meta name="keyword" content="웹페이지 제작">
     <meta name="description" content="웹페이지 제작">
     <meta name="author" content="SAGM Lee">
     <meta name="application-name" content="SAGM">
     <link rel="stylesheet" type="text/css" href="css\SAGM_main.css">
-    <!--<script src="SAGM_main.js"></script>-->
+    <script src="js\SAGM_main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
     </head>
 
     <body>
-    
-        <div class="flex1"></div>
-        <div class="main">
+    <div class="full">
+        <div class="main snap" id="one">
             <div class="main_back"></div>
             <div class="middle">
                 <div class="card_frame">
                     <div class="card">
-                        <div class="name_con">
                             <div class="blank"></div>
                             <div class="rotateg"><div class="gradn"></div></div>
                             <div class="rotatef"><img class="namecard" src="image\namecard1.png" alt="명함 앞면"></div>
                             <div class="rotateb"><img class="namecard2" src="image\namecard2.png" alt="명함 뒷면"></div>
-                        </div>
                     </div>
-                    <div class="namecard_shadow"></div>
+                        <div class="namecard_shadow"></div>
                 </div>
+
                 <div class="slog">
-                        <h1>웹사이트가 아직 없으신가요?</h1>
-                        <h1 class="h_2">웹사이트는 브랜딩의 시작입니다.</h1>
-                        <div class="slogd">
-                            <p>고유한 <b>웹사이트는 브랜딩의 꽃</b>입니다.</p>
-                            <p>퀄리티와 가독성이 좋은 웹사이트를 통해</p>
-                            <p>나의 <b>전문성</b>을 표현하고</p>
-                            <p>서비스의 <b>가치를 상승</b>시킬 수 있습니다.</p>
+                        <div class="autoh"></div>
+                        <div>
+                            <h1>웹사이트가 아직 없으신가요?<br>웹사이트는 브랜딩의 시작입니다.</h1>
                         </div>
+                        <hr>
+                        <div>
+                            <p>가독성이 뛰어나고 정보의 흐름이 좋은 웹사이트로 <br>
+                                고객 경험을 상승시키고 서비스의 가치를 높여보세요.
+                            </p>
+                        </div>
+                        <hr>
+                        <div><a class="mainlink" href="ask.html" target="news"><div class="alw">1분 만에 상담요청하기</div></a></div>
+                        <div id="quick">빠른 상담  010 - 2417 - 2495</div>
                 </div>
             </div>
-         
-
-        <a class="mainlink" href="ask.html">1분만에 원하는 웹구조 전송하고 상담요청하기</a>
-
-        <div class="otherlink">
-            <a href="why.html" class="link1"><span>나에게 필요한 서비스인지 잘 모르겠어요</span><span class="hide">❓</span></a>
-            <a href="how.html" class="link2"><span>구성과 비용, 작업기간이 궁금해요</span><span class="hide">💲</span></a>
-            <a href="what.html" class="link3"><span>다른 업체와의 차이점이 무엇인가요?</span><span class="hide">📌</span></a>
         </div>
 
-        <div class="port">PORTFOLIO
-            <svg width="30px" height="18px">
-                <path style="stroke: rgb(0, 0, 0); fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2px;" d="M 25.158 15.77 L 15.013 5.08 L 4.869 15.77"></path>
-            </svg>
+        <div class="otherlink snap frontl" id="two">
+            <a href="http://yedament.com/" target="_blank"><div class="l1"><div class="subsg">인천 계양구 인테리어</div><div class="mainsg">적선지가</div></div></a>
+            <a href="http://www.cubeinterior.kr/default/" target="_blank"><div class="l2"><div class="subsg">인천 옥련동 인테리어</div><div class="mainsg">큐브인테리어</div></div></a>
+            <a href="http://idecomall.co.kr/" target="_blank"><div class="l3"><div class="subsg">서울 구로구 인테리어</div><div class="mainsg">동아인테리어</div></div></a>
+            <a href="https://www.1204design.co.kr/" target="_blank"><div class="l4"><div class="subsg">광주 광산구 인테리어</div><div class="mainsg">1024 디자인</div></div></a>
+            <a href="http://vaciodesign.co.kr/" target="_blank"><div class="l4"><div class="subsg">경기 화성시 인테리어</div><div class="mainsg">바시오 디자인</div></div></a>
+            <a href="http://sgcwedu.co.kr/" target="_blank"><div class="l4"><div class="subsg">경기 수원시 수학학원</div><div class="mainsg">SG청운학원</div></div></a>
+            <a href="http://www.jdid.co.kr/" target="_blank"><div class="l4"><div class="subsg">경기 성남시 인테리어</div><div class="mainsg">JD 디자인그룹</div></div></a>
+            <a href="http://pastelskin.com/" target="_blank"><div class="l4"><div class="subsg">서울 성동구 피부과</div><div class="mainsg">연세 파스텔 의원</div></div></a>
         </div>
-            <iframe src="portfolio.html" frameborder="0"></iframe>
 
+    </div>   
+    
+    <div class="carf">
+        <a href="#one"><div class="car" id="c1"></div></a><a href="#two"><div class="car" id="c2"></div></a>
+    </div>
+<iframe class="news" name="news" frameborder="0"></iframe>
+<script>
+
+const section1 = document.getElementById('one');
+const section2 = document.getElementById('two');
+const indicator1 = document.getElementById('c1');
+const indicator2 = document.getElementById('c2');
+indicator1.classList.add('active');
+
+function updateIndicators() {
+    const rect = section1.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+
+    if (rect.bottom < viewportHeight * 0.5) {
+        indicator1.classList.remove('active');
+        indicator2.classList.add('active');
+    } else {
+        indicator1.classList.add('active');
+        indicator2.classList.remove('active');
+    }
+}
+updateIndicators();
+window.addEventListener('resize', updateIndicators);
+document.querySelector('.full').addEventListener('scroll', updateIndicators);
+</script>
+<script>
+    function popup() {
+        let newss = document.querySelector('.news');
+        newss.style.display = 'block';
+    }
+    let newslink = Array.from(document.querySelectorAll('.mainlink'));
+    newslink.forEach(function(link) {
+        link.onclick = function() {
+            popup();
+        };
+    });
+    </script>
+    
+    <script>
+        window.addEventListener('message', function(event) {
+            if (event.data === 'hideNews') {
+                var newsElement = document.querySelector('.news');
+                if (newsElement) {
+                    newsElement.style.display = 'none';
+                }
+            }
+        });
+    </script>
     </body>
 </html>

@@ -1,0 +1,111 @@
+.otherlink {
+  display: flex;
+  width: 100%;
+  min-height: max(800px,100vh);
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 0.5vw;
+  flex-wrap: wrap;
+  padding: 80px 15vw;
+  padding-bottom: 120px;
+  text-decoration-line: none;
+}
+
+.frontl a {
+  flex: 1 0 45%;
+  border-radius: 0.5vw;
+  transition: 0.5s;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  row-gap: 1vh;
+  flex-wrap: wrap;
+  background-color: #D7D7D7;
+  position: relative;
+}
+
+.l1::before, .l2::before, .l3::before, .l4::before, .l5::before, .l6::before, .l7::before, .l8::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5vw;
+  background-image: linear-gradient(to top left, #3399ff 0%, #ff99cc 100%);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.frontl a:hover {
+  background-color: transparent;
+}
+
+.otherlink a:hover .mainsg {
+  color: rgb(42, 30, 134);
+}
+
+.otherlink a > div{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: min(15vw,40px);
+  
+}
+
+.otherlink a div .linkblank {
+  height: 0;
+  transition: 0.5s;
+}
+.otherlink a:hover div .linkblank {
+  height: 15vh;
+}
+
+.mainsg {
+  color: rgb(66, 66, 66);
+  font-size: clamp(24px,3vw,30px);
+  font-weight: 700;
+  word-break: keep-all;
+  transition: 0.5s;
+  mix-blend-mode: multiply;
+}
+
+.subsg {
+  color: rgb(146, 146, 146);
+  font-weight: 600;
+  word-break: keep-all;
+  font-size: clamp(18px,1.5vw,24px);
+  transition: 0.5s;
+  mix-blend-mode: multiply;
+}
+
+@media screen and (max-width: 900px) {
+  .otherlink {
+    padding: 40px 10vw 80px 10vw;
+  }
+
+  .otherlink a {
+    flex: 1 0 100%;
+    justify-content: center;
+    background-image: none;
+    padding: 20px;
+  }
+  .otherlink a div {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .otherlink a:hover {
+    background-color: transparent;
+  }
+
+}
